@@ -20,7 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('quotes', [QuoteController::class, 'index']);
-Route::get('quotes/{id}', [QuoteController::class, 'show']);
+Route::get('quotes/{quote}', [QuoteController::class, 'show']);
 Route::post('quotes', [QuoteController::class, 'store']);
-Route::put('quotes/{id}', [QuoteController::class, 'update']);
-Route::delete('quotes/{id}', [QuoteController::class, 'delete']);
+Route::put('quotes/{quote}', [QuoteController::class, 'update']);
+Route::delete('quotes/{quote}', [QuoteController::class, 'delete']);
